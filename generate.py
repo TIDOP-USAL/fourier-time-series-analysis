@@ -38,7 +38,7 @@ def export_psi() -> None:
 
     for point_id in unique_ids:
         df_point = psi_df[psi_df['id'] == point_id].sort_values('date')
-        values = df_point['date']
+        values = df_point['date_value']
         velocities.append(values)
 
     velocities = np.array(velocities, dtype=float)
